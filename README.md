@@ -1,3 +1,5 @@
 # Ducks
 
-A description of this package.
+A simple Redux store implementation extended using Combine
+
+
