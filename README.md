@@ -1,6 +1,10 @@
 ![header](./header.png)
 
 - - - -
+[![Build Status](https://app.bitrise.io/app/06e35f68b2f0e2e1/status.svg?token=arIto3zVAJgWAmu0tKXXvw&branch=master)](https://app.bitrise.io/app/06e35f68b2f0e2e1)
+
+---
+
 
 ## Getting Started
 Ducks supports installation through SPM on iOS 13, macOS 10.15, tvOS & watchOS.
