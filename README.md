@@ -24,8 +24,6 @@ Once you’ve added Ducks to your project simply import it.
 import Ducks
 ```
 
-Start by creating a state to represent your app. In this example we will create a todo list .
-
 Let’s begin by creating our TodosState.  This is the representation of our apps current state as it holds the list of ToDo models.
 
 ```swift
