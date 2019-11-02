@@ -28,7 +28,7 @@ Let’s begin by creating our TodosState.  This is the representation of our app
 
 ```swift
 struct TodosState: StateType {
-	let todos: [ToDo]
+  let todos: [ToDo]
 }
 ```
 
@@ -36,7 +36,7 @@ We will also need a simple data model representing a ToDo
 
 ```swift
 struct ToDo: Equatable {
-	let name: String
+  let name: String
   let complete: Bool
 }
 ```
@@ -45,8 +45,8 @@ Now that we are done modelling our data, let’s take a moment to think about th
 
 ```swift
 enum ToDoActions: Action {
-	case create(String)
-  Case markAsComplete(ToDo)
+  case create(String)
+  case markAsComplete(ToDo)
 }
 ```
 
@@ -54,14 +54,14 @@ We have completed describing our app state as well as the actions for that state
 
 ```swift
 let todoReducer: Reducer<ToDosState> = { action, state in
-	switch action:
-	case ToDoActions.create(let name):
+  switch action:
+  case ToDoActions.create(let name):
     var todos = state.todos
-	  todos.append(ToDo(name: name, complete: false))
-	  return ToDosState(todos: todos)
+    todos.append(ToDo(name: name, complete: false))
+    return ToDosState(todos: todos)
   case ToDoActions.markAsComplete(let todo):
     var todos = state.todos
-	  if let idx = todos.index(of: todo) {
+    if let idx = todos.index(of: todo) {
       todos.remove(at: idx)
       todos.append(ToDo(name: todo.name, complete: true))
     }
