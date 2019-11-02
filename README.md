@@ -2,7 +2,7 @@
 
 - - - -
 
-## ## Getting Started
+## Getting Started
 Ducks supports installation through SPM on iOS 13, macOS 10.15, tvOS & watchOS.
 
 Simply add Ducks to your package manifest.
@@ -13,7 +13,7 @@ dependencies: [
 ]
 ```
 
-## ## To Do Example
+## To Do Example
 Once you’ve added Ducks to your project simply import it.
 
 ```swift
