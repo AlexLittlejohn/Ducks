@@ -1,11 +1,7 @@
 ![header](./header.png)
 
 - - - -
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Falexlittlejohn%2Fducks%2Fbadge%3Fref%3Dmaster&style=flat)](https://actions-badge.atrox.dev/alexlittlejohn/ducks/goto?ref=master)
-
-[![License MIT](https://img.shields.io/github/license/alexlittlejohn/ducks)](https://opensource.org/licenses/MIT)
-
-[![Swift 5.1](https://img.shields.io/badge/swift-5.1-blue)](./)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Falexlittlejohn%2Fducks%2Fbadge%3Fref%3Dmaster&style=flat)](https://actions-badge.atrox.dev/alexlittlejohn/ducks/goto?ref=master) [![License MIT](https://img.shields.io/github/license/alexlittlejohn/ducks)](https://opensource.org/licenses/MIT) [![Swift 5.1](https://img.shields.io/badge/swift-5.1-blue)](./)
 ---
 
 
