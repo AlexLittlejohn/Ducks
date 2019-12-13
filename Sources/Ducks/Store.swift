@@ -11,7 +11,7 @@ public class Store<S: StateType>: ObservableObject {
     
     @Published public private(set) var state: S
     
-    public private(set) var dispatch: Dispatch!
+    public private(set) var dispatch: Dispatch = { _ in }
     
     private var isDispatching: Bool = false
     
