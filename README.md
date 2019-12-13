@@ -1,7 +1,7 @@
 ![header](./header.png)
 
 - - - -
-[![Build Status](https://app.bitrise.io/app/05012f13f11e4b37/status.svg?token=yjXHD0XL4VMpwGvUhQNO7w&branch=master)](https://app.bitrise.io/app/05012f13f11e4b37)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Falexlittlejohn%2Fducks%2Fbadge%3Fref%3Dmaster&style=flat)](https://actions-badge.atrox.dev/alexlittlejohn/ducks/goto?ref=master)
 ---
 
 
