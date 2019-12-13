@@ -5,7 +5,7 @@
 
 [![License MIT](https://img.shields.io/github/license/alexlittlejohn/ducks)](https://opensource.org/licenses/MIT)
 
-[![Swift 5.1](https://img.shields.io/badge/swift-5.1-blue](./)
+[![Swift 5.1](https://img.shields.io/badge/swift-5.1-blue)](./)
 ---
 
 
