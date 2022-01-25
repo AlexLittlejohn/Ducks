@@ -16,13 +16,13 @@ struct Label {
 
 final class SubscriptionTests: XCTestCase {
 
-    var store: Store<CounterState>!
+    var store: Store<CounterActions, CounterState, CounterEnvironment>!
     var token: AnyCancellable!
     var label: Label!
     
     override func setUp() {
         label = Label()
-        store = Store(reducer: counterReducer, state: CounterState(count: 0))
+        store = Store(reducer: counterReducer, state: CounterState(count: 0), environment: CounterEnvironment())
     }
 
     override func tearDown() {

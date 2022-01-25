@@ -1,30 +1,32 @@
 import XCTest
 @testable import Ducks
 
-enum CounterActions: Action {
+enum CounterActions {
     case increment
     case decrement
     case set(Int)
 }
 
-struct CounterState: StateType {
-    let count: Int
+struct CounterState {
+    var count: Int
 }
 
-let counterReducer: Reducer<CounterState> = { action, state in
+struct CounterEnvironment { }
+
+let counterReducer: Reducer<CounterActions, CounterState> = { action, state in
     switch action {
     case CounterActions.increment:
-        return CounterState(count: state.count + 1)
+        state.count += 1
     case CounterActions.decrement:
-        return CounterState(count: state.count - 1)
+        state.count -= 1
     case CounterActions.set(let value):
-        return CounterState(count: value)
+        state.count = value
     case _:
-        return state
+        break
     }
 }
 
-let incrementMiddleware: Middleware<CounterState> = { store, next, action in
+let incrementMiddleware: Middleware<CounterActions, CounterState, CounterEnvironment> = { store, next, environment, action in
     let state = store.state
     
     switch action {
@@ -35,7 +37,7 @@ let incrementMiddleware: Middleware<CounterState> = { store, next, action in
     }
 }
 
-let setMiddleware: Middleware<CounterState> = { store, next, action in
+let setMiddleware: Middleware<CounterActions, CounterState, CounterEnvironment> = { store, next, environment, action in
     switch action {
     case CounterActions.set(let value):
         next(CounterActions.set(value * 2)) // multiply by 2
@@ -46,10 +48,10 @@ let setMiddleware: Middleware<CounterState> = { store, next, action in
 
 final class StoreTests: XCTestCase {
 
-    var store: Store<CounterState>!
+    var store: Store<CounterActions, CounterState, CounterEnvironment>!
     
     override func setUp() {
-        store = Store(reducer: counterReducer, state: CounterState(count: 0))
+        store = Store(reducer: counterReducer, state: CounterState(count: 0), environment: CounterEnvironment())
     }
 
     override func tearDown() {
@@ -72,7 +74,7 @@ final class StoreTests: XCTestCase {
     
     func testMiddleware() {
         
-        store = Store(reducer: counterReducer, state: CounterState(count: 0), middleware: [incrementMiddleware])
+        store = Store(reducer: counterReducer, state: CounterState(count: 0), middleware: [incrementMiddleware], environment: CounterEnvironment())
         
         XCTAssertEqual(store.state.count, 0)
 
@@ -87,7 +89,7 @@ final class StoreTests: XCTestCase {
     
     func testNonRecursiveMiddleware() {
         
-        store = Store(reducer: counterReducer, state: CounterState(count: 0), middleware: [setMiddleware])
+        store = Store(reducer: counterReducer, state: CounterState(count: 0), middleware: [setMiddleware], environment: CounterEnvironment())
         
         XCTAssertEqual(store.state.count, 0)
 
@@ -102,7 +104,7 @@ final class StoreTests: XCTestCase {
     
     func testMultipleMiddleware() {
         
-        store = Store(reducer: counterReducer, state: CounterState(count: 0), middleware: [incrementMiddleware, setMiddleware])
+        store = Store(reducer: counterReducer, state: CounterState(count: 0), middleware: [incrementMiddleware, setMiddleware], environment: CounterEnvironment())
         
         XCTAssertEqual(store.state.count, 0)
 

@@ -1,11 +1,17 @@
 ![header](./header.png)
 
 - - - -
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/alexlittlejohn/ducks/Swift)](https://github.com/AlexLittlejohn/Ducks/actions) [![License MIT](https://img.shields.io/github/license/alexlittlejohn/ducks)](https://opensource.org/licenses/MIT) [![Swift 5.1](https://img.shields.io/badge/swift-5.1-blue)](./)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/alexlittlejohn/ducks/Swift)](https://github.com/AlexLittlejohn/Ducks/actions) [![License MIT](https://img.shields.io/github/license/alexlittlejohn/ducks)](https://opensource.org/licenses/MIT) [![Swift 5.5](https://img.shields.io/badge/swift-5.5-blue)](./)
 ---
 
+# Overview
 
-## Getting Started
+Ducks is a micro Redux implementation that borrows inspiration from [ReSwift](ReSwift) and the [Composable Architecture](Composable Architecture). It is designed to be as simple as possible whilst still offering the safety and predictability of the Redux design pattern.
+
+[ReSwift]: https://github.com/ReSwift/ReSwift
+[Composable Architecture]: https://github.com/pointfreeco/swift-composable-architecture
+
+## Installation
 Ducks supports installation through SPM on iOS 13, macOS 10.15, tvOS & watchOS.
 
 Simply add Ducks to your package manifest.
