@@ -59,15 +59,15 @@ final class StoreTests: XCTestCase {
     }
 
     func testDispatch() {
-        store.dispatch(CounterActions.increment)
+        store.send(CounterActions.increment)
         
         XCTAssertEqual(store.state.count, 1)
         
-        store.dispatch(CounterActions.decrement)
+        store.send(CounterActions.decrement)
         
         XCTAssertEqual(store.state.count, 0)
 
-        store.dispatch(CounterActions.set(5))
+        store.send(CounterActions.set(5))
         
         XCTAssertEqual(store.state.count, 5)
     }
@@ -78,11 +78,11 @@ final class StoreTests: XCTestCase {
         
         XCTAssertEqual(store.state.count, 0)
 
-        store.dispatch(CounterActions.increment)
+        store.send(CounterActions.increment)
         
         XCTAssertEqual(store.state.count, 2)
         
-        store.dispatch(CounterActions.decrement)
+        store.send(CounterActions.decrement)
         
         XCTAssertEqual(store.state.count, 1)
     }
@@ -93,11 +93,11 @@ final class StoreTests: XCTestCase {
         
         XCTAssertEqual(store.state.count, 0)
 
-        store.dispatch(CounterActions.increment)
+        store.send(CounterActions.increment)
         
         XCTAssertEqual(store.state.count, 1)
         
-        store.dispatch(CounterActions.set(3))
+        store.send(CounterActions.set(3))
         
         XCTAssertEqual(store.state.count, 6)
     }
@@ -108,7 +108,7 @@ final class StoreTests: XCTestCase {
         
         XCTAssertEqual(store.state.count, 0)
 
-        store.dispatch(CounterActions.increment)
+        store.send(CounterActions.increment)
         
         // increment is replaced with set
         // set multiplies its value * 2 i.e. (0 + 2) * 2

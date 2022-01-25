@@ -36,7 +36,7 @@ final class SubscriptionTests: XCTestCase {
         
         XCTAssertEqual(label.text, "0")
         
-        store.dispatch(CounterActions.increment)
+        store.send(CounterActions.increment)
         
         XCTAssertEqual(label.text, "1")
     }
@@ -46,13 +46,13 @@ final class SubscriptionTests: XCTestCase {
         
         XCTAssertEqual(label.text, "0")
         
-        store.dispatch(CounterActions.increment)
+        store.send(CounterActions.increment)
         
         XCTAssertEqual(label.text, "1")
         
         token = nil
         
-        store.dispatch(CounterActions.increment)
+        store.send(CounterActions.increment)
         
         XCTAssertEqual(label.text, "1")
     }
