@@ -24,4 +24,4 @@ dependencies: [
 
 ## Examples
 
-Check the Examples directory for the example app which will showcase how to use the framework as well as how to
+Check the Examples directory for the example app which will showcase how to use the framework as well as how to write tests for your features that use this library.
