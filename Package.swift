@@ -1,12 +1,12 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.5
 
 import PackageDescription
 
 let package = Package(
     name: "Ducks",
     platforms: [
-        .macOS(.v10_15),
-        .iOS(.v13),
+        .macOS(.v11),
+        .iOS(.v14),
         .tvOS(.v12),
         .watchOS(.v6)
     ],
