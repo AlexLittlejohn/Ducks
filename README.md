@@ -6,10 +6,9 @@
 
 # Overview
 
-Ducks is a micro Redux implementation that borrows "a lot" of inspiration from the [Composable Architecture](Composable Architecture). However, it is designed to be much simpler and a more barebones offering.  
+Ducks is a micro Redux implementation that borrows "a lot" of inspiration from the [Composable Architecture](ComposableArchitecture). However, it is designed to be much simpler and a more barebones offering.  
 
-[ReSwift]: https://github.com/ReSwift/ReSwift
-[Composable Architecture]: https://github.com/pointfreeco/swift-composable-architecture
+[ComposableArchitecture]: https://github.com/pointfreeco/swift-composable-architecture
 
 ## Installation
 Ducks supports installation through SPM on iOS 13, macOS 10.15, tvOS & watchOS.
