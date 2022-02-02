@@ -37,7 +37,7 @@ enum ExamplesAction {
   case animateRect2
 }
 
-func toggleReducer( state: inout ExamplesState, id: UUID, environment: ExamplesEnvironment) -> AnyPublisher<ExamplesAction, Never> {
+func toggleReducer(state: inout ExamplesState, id: UUID, environment: ExamplesEnvironment) -> AnyPublisher<ExamplesAction, Never> {
 
     if let index = state.tasks.firstIndex(where: { $0.id == id }) {
         state.tasks[index].isComplete.toggle()
