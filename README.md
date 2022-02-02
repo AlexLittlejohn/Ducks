@@ -1,7 +1,7 @@
 ![header](./header.png)
 
 - - - -
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/alexlittlejohn/ducks/Swift)](https://github.com/AlexLittlejohn/Ducks/actions) [![License MIT](https://img.shields.io/github/license/alexlittlejohn/ducks)](https://opensource.org/licenses/MIT) [![Swift 5.5](https://img.shields.io/badge/swift-5.5-blue)](./)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/alexlittlejohn/ducks/Swift)](https://github.com/AlexLittlejohn/Ducks/actions) [![License MIT](https://img.shields.io/github/license/alexlittlejohn/ducks)](https://opensource.org/licenses/MIT) [![Swift 5.5](https://img.shields.io/badge/swift-5.5-blue)](./) [![codecov](https://codecov.io/gh/AlexLittlejohn/Ducks/branch/master/graph/badge.svg?token=R65EFKRU56)](https://codecov.io/gh/AlexLittlejohn/Ducks)
 ---
 
 # Overview
